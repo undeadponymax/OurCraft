@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://biyrub5wm3v"]
+
+[ext_resource type="Script" path="res://GDScript/main_menu.gd" id="1_xio8j"]
+[ext_resource type="Texture2D" uid="uid://ctqfnjma00olh" path="res://assets/textures/gui/sprites/widget/button.png" id="2_kva86"]
+[ext_resource type="Texture2D" uid="uid://cfgbgndydctwb" path="res://assets/textures/gui/sprites/widget/button_highlighted.png" id="3_ogy86"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_xio8j")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 322.0
+offset_top = 333.0
+offset_right = 837.0
+offset_bottom = 407.0
+texture_normal = ExtResource("2_kva86")
+texture_pressed = ExtResource("3_ogy86")
+texture_hover = ExtResource("3_ogy86")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="."]
+offset_left = 545.0
+offset_top = 344.0
+offset_right = 630.0
+offset_bottom = 367.0
+text = "Start game"
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_button_pressed"]
